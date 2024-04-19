@@ -1,3 +1,11 @@
+.country_location {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.26px;
+  text-align: left;
+  padding: 0px 80px;
+}
+
 /* <--- HEADER DE LA APP (LOGO Y BOTON MODAL) --> */
 .nav_bar{
   display: flex;
@@ -34,6 +42,7 @@
   border-radius: 16px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: 1px solid #F2F2F2;
+  cursor: pointer;
 }
 
 .item_search_mini {
@@ -42,11 +51,22 @@
   justify-content: center; 
   border-right: 1px solid #F2F2F2;
   height: 100%;
+  max-width: 120px;
   padding: 0 20px;
   font-size: 14px;
   font-weight: 400;
   line-height: 17.57px;
   text-align: left;
+}
+
+.item_search_mini > input {
+  width: auto;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  max-width: 120px;
+  padding: 0 12px;
 }
 
 .item_search_mini:last-child {
@@ -59,7 +79,7 @@
 
 @media (max-width: 640px) {
   .nav_bar {
-    padding: 40px;
+    padding: 20px;
   }
   
   .logo {
@@ -69,6 +89,7 @@
 
   .options {
     min-width: unset;
+    justify-content: center;
   }
 }
 
@@ -105,9 +126,14 @@
   flex-direction: column;
   background-color: transparent;
   height: 100%;
+  gap: 22px;
 }
 
 .item_search_guests {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  height: 55px;
   border-left: 1px solid #00000012;
   border-right: 1px solid #00000012;
   padding: .5rem;
@@ -115,7 +141,13 @@
 }
 
 .item_search_location {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  height: 55px;
   border-right: 1px solid #00000012;
+  padding: .5rem;
+  font-size: 14px;
   padding: .5rem;
   font-size: 14px;
 }
@@ -123,6 +155,8 @@
 .item_search_button {
   border-left: 1px solid #00000012;
   display: flex;
+  flex-direction: column;
+  height: 55px;
   justify-content: center;
   align-items: center;
 }
@@ -147,12 +181,12 @@
   background-color: #f04444;
 }
 
-.item_search:focus-within {
+.item_search_guests:focus-within, .item_search_location:focus-within {
   border-radius: 16px;
   border: 1px solid #333333
 }
 
-.item_search > input {
+.item_search_guests > input, .item_search_location > input {
   height: 18px;
   outline: none;
   border: none;
@@ -163,24 +197,22 @@
   padding-left: 1rem;
 }
 
-.item_search > label {
+.item_search_guests > label, .item_search_location > label {
   font-size: 12px;
   font-weight: 700;
   padding-left: 1rem;
 }
 
-.conditional_render {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px;
-}
+/* <--- SECCIONES PARA OPBIONES ---> */
 
 .location_list {
   display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
+  padding: 20px;
 }
 
 .section_locations li {
@@ -199,7 +231,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 0 20px;
-  gap: 10px;
+  gap: 40px;
 }
 
 .btn_guest {
@@ -218,6 +250,7 @@
   font-weight: 400;
   line-height: 17.57px;
   color: gray;
+  margin-bottom: 8px;
 }
 
 .btns {
@@ -261,6 +294,109 @@
   }
 }
 
-/* <--- SECCIONES PARA OPBIONES ---> */
 
 /* <--- TARJETAS CON LOS PISOS ---> */
+
+.card_container {
+  width: 100vw;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.card_item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  max-width: 400px;
+  min-width: 350px;
+  height: 350px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card_item figure, .card_item img {
+  width: 100%;
+  border-radius: 24px;
+  width: 395px;
+  height: 269px;
+}
+
+.card_item figure {
+  margin-bottom: 8px;
+}
+
+.card_superhost {
+  width: 100px;
+  height: 28px;
+  border-radius: 12px;
+  border: 2px solid #4F4F4F;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14.63px;
+  text-align: left;
+  padding: 5px 12px;
+  margin-right: 10px;
+}
+
+.title_rating_container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.card_type_beds {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  text-align: left;
+  color: #828282;
+}
+
+.card_rating {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px; 
+}
+
+.card_rating > i {
+  width: 24px;
+  height: 24px;
+  color: #EB5757B8;
+}
+
+.card_title {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: left;
+  padding: 0 4px;
+}
+
+@media (max-width: 940px) {
+  .card_container {
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .card_list {
+    display: flex;
+    width: 350px;
+  }
+
+  .card_item figure, .card_item img {
+    width: 100%;
+  }
+}
