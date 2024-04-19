@@ -1,0 +1,266 @@
+/* <--- HEADER DE LA APP (LOGO Y BOTON MODAL) --> */
+.nav_bar{
+  display: flex;
+  width: 100vw;
+  min-height: 8lvh;
+  align-items: center;
+  padding: 32px 96px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  display: flex; 
+  min-width: 280px;
+  max-width: 320px;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.options {
+  display: flex;
+  flex-grow: 1;
+  min-width: 300px;
+  justify-content: flex-end;
+}
+
+.search_bar_mini {
+  display: flex;
+  height:  55px;
+  width: auto;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #F2F2F2;
+}
+
+.item_search_mini {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  border-right: 1px solid #F2F2F2;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  text-align: left;
+}
+
+.item_search_mini:last-child {
+  border-right: none;
+}
+
+.item_search_mini > i {
+  color: #EB5757;
+}
+
+@media (max-width: 640px) {
+  .nav_bar {
+    padding: 40px;
+  }
+  
+  .logo {
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .options {
+    min-width: unset;
+  }
+}
+
+/* <--- MODAL DE DE BUSQUEDA --->  */
+
+.modal_search {
+  height: 420px;
+  width: 100vw;
+  max-height: 632px;
+  background-color: white;
+  padding: 96px;
+  border: 2px solid tomato;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.search_bar {
+  display: grid;
+  height: 55px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr; 
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+}
+
+.item_search {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  height: 100%;
+}
+
+.item_search_guests {
+  border-left: 1px solid #00000012;
+  border-right: 1px solid #00000012;
+  padding: .5rem;
+  font-size: 14px;
+}
+
+.item_search_location {
+  border-right: 1px solid #00000012;
+  padding: .5rem;
+  font-size: 14px;
+}
+
+.item_search_button {
+  border-left: 1px solid #00000012;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item_search_button > button {
+  width: 127px;
+  height: 48px;
+  border: none;
+  border-radius: 16px;
+  background-color: #EB5757;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item_search_button > button:hover {
+  margin: 3px;
+  background-color: #f04444;
+}
+
+.item_search:focus-within {
+  border-radius: 16px;
+  border: 1px solid #333333
+}
+
+.item_search > input {
+  height: 18px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  padding-left: 1rem;
+}
+
+.item_search > label {
+  font-size: 12px;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.conditional_render {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+}
+
+.location_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section_locations li {
+  display: flex;
+  background-color: transparent;
+  height: 100%;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  cursor: pointer;
+}
+
+.section_guests {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.btn_guest {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_title{
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 11.29px;
+}
+
+.btn_subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.57px;
+  color: gray;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.57px;
+}
+
+.btns > button {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  top: 244px;
+  left: 600px;
+  gap: 0px;
+  border-radius: 4px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #828282;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .modal_search {
+    height: 632px;
+  }
+  
+  .logo {
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .options {
+    min-width: unset;
+  }
+}
+
+/* <--- SECCIONES PARA OPBIONES ---> */
+
+/* <--- TARJETAS CON LOS PISOS ---> */

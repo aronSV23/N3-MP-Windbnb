@@ -1,0 +1,14 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  --beigeRosa: #EB5757;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
