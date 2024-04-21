@@ -11,4 +11,7 @@
   list-style: none;
 }
 
+#root {
+  width: 100vw;
+}
 
