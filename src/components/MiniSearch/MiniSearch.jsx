@@ -1,4 +1,5 @@
 import React from 'react'
+import './MiniSearch.css'
 
 export const MiniSearch = ({ setIsOpen, searchLocation, guests }) => {
     return (

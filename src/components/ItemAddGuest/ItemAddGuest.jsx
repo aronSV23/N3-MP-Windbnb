@@ -1,5 +1,6 @@
 import React from 'react'
 import { AddGuestBtns } from '../AddGuestBtns/AddGuestBtns'
+import './ItemAddGuest.css'
 
 export const ItemAddGuest = ({ showOptions, esInput, guests, setGuests, childGuests, setChildGuests, adultGuests, setAdultGuests }) => {
 

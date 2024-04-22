@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardItem } from '../CardItem/CardItem'
+import './CardContainer.css'
 
 export const CardContainer = ({ arreglo }) => {
     return (

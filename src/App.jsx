@@ -10,7 +10,7 @@ function App() {
   const [showRooms, setShowRooms] = useState([])
   const [adultGuests, setAdultGuests] = useState(0)
   const [childGuests, setChildGuests] = useState(0)
-  const [guests, setGuests] = useState(adultGuests+childGuests)
+  const [guests, setGuests] = useState(adultGuests + childGuests)
   const [searchLocation, setSearchLocation] = useState('')
 
   const flatsFilter = () => {
@@ -36,21 +36,25 @@ function App() {
       setIsOpen(false)
       return
     }
-    
+
     setShowRooms(flats)
     setIsOpen(false)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     flatsFilter()
-  },[])
+  }, [])
 
   return (
     <>
       <header className='header_container'>
         <NavBar setIsOpen={setIsOpen} searchLocation={searchLocation} guests={guests} />
-        <h2 className='country_location'>Stays in Finland</h2>
+        <div className='header_subtitle'>
+          <h2 className='country_location'>Stays in Finland</h2>
+          <span className='locations_found'>{showRooms.length}+ stays</span>
+        </div>
       </header>
+
 
       <CardContainer arreglo={showRooms} />
 

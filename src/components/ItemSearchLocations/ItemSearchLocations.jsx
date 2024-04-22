@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { LocationsItem } from '../LocationsItem/LocationsItem'
+import './ItemSearchLocations.css'
 
 export const ItemSearchLocations = ({ showOptions, esInput, flats, searchLocation, setSearchLocation }) => {
     const [locations, setLocations] = useState([])

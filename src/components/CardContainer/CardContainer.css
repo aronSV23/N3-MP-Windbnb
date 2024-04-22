@@ -1,0 +1,29 @@
+
+.card_container {
+    width: 100vw; 
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  
+@media (max-width: 980px) {
+    .card_container {
+      padding: 20px;
+      justify-content: center;
+    }
+    
+    .card_list {
+      display: flex;
+      width: 350px;
+    }
+  }
+  

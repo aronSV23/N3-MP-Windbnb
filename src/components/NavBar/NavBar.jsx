@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../assets/logo.svg'
 import { MiniSearch } from '../MiniSearch/MiniSearch'
+import './NavBar.css'
 
 export const NavBar = ({ setIsOpen, searchLocation, guests }) => {
     return (

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ItemAddGuest } from '../ItemAddGuest/ItemAddGuest'
 import { ItemSearchLocations } from '../ItemSearchLocations/ItemSearchLocations'
+import './ModalSearch.css'
 
 export const ModalSearch = ({ setIsOpen, flats, guests, setGuests, searchLocation, setSearchLocation, flatsFilter,  childGuests, setChildGuests, adultGuests, setAdultGuests  }) => {
     const [esInput, setEsInput] = useState('')

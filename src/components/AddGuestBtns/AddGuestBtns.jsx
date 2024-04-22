@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './AddGuestBtns.css'
 
 export const AddGuestBtns = ({ title, subtitle, guests, setGuests,  setTypeGuest, typeGuest }) => {
     const [guest, setGuest] = useState(typeGuest)

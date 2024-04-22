@@ -1,4 +1,5 @@
 import React from 'react'
+import './CardItem.css'
 
 export const CardItem = ({ data }) => {
     const beds = data.beds > 1? data.beds + ' beds' : data.beds + ' bed'
